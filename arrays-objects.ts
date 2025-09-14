@@ -26,8 +26,18 @@ let employee: {
     id: number; 
     name: string; 
     isActive: boolean 
+    role :{ id: number; name: string }
     } = { 
         id: 1, 
         name: "John Doe", 
-        isActive: true 
+        isActive: true ,
+        role : { id :202501, name : "TS Developer"}
     };
+
+let notNullValue :{} = {};
+notNullValue = { key: "value" }; // Valid, as {} can hold any non-null object
+//notNullValue = null; // Error, as null is not assignable to {}
+
+let specifyAsObject : Record<string, string | boolean>;
+specifyAsObject = { key1: "value1", "key2": true }; // Valid key can be used without inverted commas
+//specifyAsObject = { key1: "value1", key2: 100 }; // Error, as value must be string or boolean 

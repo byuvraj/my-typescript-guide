@@ -1,1 +1,1 @@
-"# my-typescript-guide" 
+# my-typescript-guide
